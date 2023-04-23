@@ -8,6 +8,8 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database.db'
 app.config['SECRET_KEY']= 'flask-wtf'
 db = SQLAlchemy(app)
 
+app.app_context().push()
+
 
 from .models.books import Book
 db.create_all()
