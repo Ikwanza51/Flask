@@ -9,6 +9,7 @@ def say_hello():
 @app.route('/news_latest')
 def news():
     newsArticles=get_latest_news()
-    news=newsArticles
-    # print(newsArticles)
-    return render_template('news.html',news_articles=news)
+    print(newsArticles)
+    # print(newsArticles['articles'])
+    return "Positive"
+    # return render_template('news.html',news_articles=news)
